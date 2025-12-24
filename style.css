@@ -119,7 +119,9 @@ main {
 
 .hero img {
   width: 100%;
+  height: auto;
   border-radius: 26px;
+  display: block;
 }
 
 .section-title {
@@ -172,8 +174,7 @@ main {
 
 .product img {
   width: 100%;
-  height: 520px;
-  object-fit: cover;
+  height: auto;
   border-radius: 30px;
 }
 
@@ -314,11 +315,7 @@ main {
 @media (max-width: 1024px) {
   .hero {
     grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .hero > div {
-    max-width: 100%;
+    gap: 32px;
   }
 
   .hero h1 {
@@ -327,13 +324,6 @@ main {
 
   .hero p {
     max-width: 100%;
-  }
-
-  .hero img {
-    width: 100%;
-    height: auto;
-    max-height: 420px;
-    object-fit: cover;
   }
 
   .page {
@@ -348,12 +338,8 @@ main {
     grid-template-columns: 1fr;
   }
 
-  .card {
-    width: 100%;
-  }
-
   .footer-content {
     grid-template-columns: 1fr;
     padding: 40px 20px;
   }
-  }
+}
