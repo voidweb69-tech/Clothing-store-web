@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fashion Store</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">FASHION</div>
+
+    <nav class="nav-links">
+      <span data-page="home">Home</span>
+      <span data-page="new">New</span>
+    </nav>
+
+    <div class="cart-btn" data-page="cart" aria-label="Cart">
+      <svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2">
+        <circle cx="9" cy="21" r="1"/>
+        <circle cx="20" cy="21" r="1"/>
+        <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>
+      </svg>
+      <span class="cart-count" id="cartCount">0</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- HOME -->
+  <section id="home" class="page">
+    <div class="hero">
+      <div>
+        <h1>Summer Collection</h1>
+        <p>Modern silhouettes. Clean fits. Statement essentials.</p>
+        <button data-page="new">Explore New</button>
+      </div>
+      <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=1200" alt="Hero image">
+    </div>
+
+    <h2 class="section-title">Featured Products</h2>
+    <div class="grid" id="homeGrid"></div>
+  </section>
+
+  <!-- NEW -->
+  <section id="new" class="page hidden">
+    <h2 class="section-title">New Arrivals</h2>
+    <div class="grid" id="newGrid"></div>
+  </section>
+
+  <!-- PRODUCT -->
+  <section id="product" class="page hidden">
+    <div class="product" id="productView"></div>
+  </section>
+
+  <!-- CART -->
+  <section id="cart" class="page hidden">
+    <h2 class="section-title">Your Cart</h2>
+    <div id="cartItems"></div>
+    <div class="cart-summary" id="cartSummary"></div>
+  </section>
+</main>
+
+<!-- JS -->
+<script src="app.js"></script>
+</body>
+</html>
