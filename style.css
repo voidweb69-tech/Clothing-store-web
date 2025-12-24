@@ -21,7 +21,6 @@ body {
   display: none;
 }
 
-/* NAVBAR */
 header {
   position: sticky;
   top: 0;
@@ -35,8 +34,8 @@ header {
   margin: auto;
   padding: 18px 40px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
@@ -59,7 +58,6 @@ header {
   color: var(--dark);
 }
 
-/* CART ICON */
 .cart-btn {
   position: relative;
   width: 26px;
@@ -83,14 +81,16 @@ header {
   border-radius: 50%;
 }
 
-/* PAGE */
+main {
+  min-height: 100vh;
+}
+
 .page {
   max-width: 1400px;
   margin: auto;
   padding: 60px 40px;
 }
 
-/* HERO */
 .hero {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -106,6 +106,244 @@ header {
 .hero p {
   max-width: 460px;
   color: var(--muted);
+}
+
+.hero button {
+  margin-top: 30px;
+  padding: 16px 38px;
+  background: var(--dark);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+}
+
+.hero img {
+  width: 100%;
+  border-radius: 26px;
+}
+
+.section-title {
+  margin: 80px 0 30px;
+  font-size: 32px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 32px;
+  width: 100%;
+}
+
+.card {
+  background: var(--card);
+  padding: 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+}
+
+.card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.card h4 {
+  margin: 14px 0 4px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+.product img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.product h2 {
+  font-size: 36px;
+}
+
+.rating {
+  color: #f5a623;
+  font-size: 14px;
+  margin: 6px 0;
+}
+
+.product button {
+  margin-top: 30px;
+  padding: 16px 40px;
+  background: var(--dark);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: 20px;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-item img {
+  width: 80px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.qty-controls button {
+  width: 26px;
+  height: 26px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+}
+
+.qty-controls span {
+  min-width: 20px;
+  text-align: center;
+}
+
+.remove {
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.cart-summary {
+  margin-top: 40px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 500px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0;
+  color: var(--muted);
+}
+
+.total {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.checkout {
+  margin-top: 30px;
+  width: 100%;
+  padding: 16px;
+  background: var(--dark);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+}
+
+.site-footer {
+  background: #fff;
+  border-top: 1px solid #eee;
+  margin-top: 100px;
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: auto;
+  padding: 50px 40px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 40px;
+}
+
+.footer-left h3 {
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.footer-left p {
+  color: var(--muted);
+  max-width: 520px;
+  line-height: 1.6;
+}
+
+.footer-right p {
+  margin: 6px 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.footer-right a {
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .hero,
+  .product {
+    grid-template-columns: 1fr;
+  }
+
+  .page {
+    padding: 30px 16px;
+  }
+
+  .nav {
+    padding: 16px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .hero img {
+    height: auto;
+    max-height: 420px;
+    object-fit: cover;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+  }
+  }  color: var(--muted);
 }
 
 .hero button {
